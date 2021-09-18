@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "237680358544",
+    "firebase_url": "https://pc-build-logger-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pc-build-logger",
+    "storage_bucket": "pc-build-logger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237680358544:android:d100fef515558856f79415",
+        "android_client_info": {
+          "package_name": "com.davidturkalj.pcbuildlogger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237680358544-b70qbjfhim3f41daifi4hk6ib08aaas8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davidturkalj.pcbuildlogger",
+            "certificate_hash": "dc93906bbee4a0e2aface43ac4c062d051d1059f"
+          }
+        },
+        {
+          "client_id": "237680358544-graft839kfc8mv9t8bpotq78qiocddtt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK3FzI1OBW0_hl_uzg4Zb-fE-9YLOen8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237680358544-graft839kfc8mv9t8bpotq78qiocddtt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
