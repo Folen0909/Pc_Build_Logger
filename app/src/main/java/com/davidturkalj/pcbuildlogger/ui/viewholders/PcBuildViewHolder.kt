@@ -1,10 +1,10 @@
-package com.davidturkalj.pcbuildlogger.ui.tabs.pcbuild.view
+package com.davidturkalj.pcbuildlogger.ui.viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.davidturkalj.pcbuildlogger.data.model.PcBuild
 import com.davidturkalj.pcbuildlogger.databinding.ItemPcBuildBinding
 import com.davidturkalj.pcbuildlogger.utilities.OnPcBuildClickListener
-import com.davidturkalj.pcbuildlogger.data.model.PcBuild
 
 class PcBuildViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(pcBuild: PcBuild, clickListener: OnPcBuildClickListener) {

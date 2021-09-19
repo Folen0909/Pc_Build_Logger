@@ -1,11 +1,11 @@
-package com.davidturkalj.pcbuildlogger.ui.tabs.pcbuild.adapter
+package com.davidturkalj.pcbuildlogger.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.davidturkalj.pcbuildlogger.R
 import com.davidturkalj.pcbuildlogger.data.model.PcBuild
-import com.davidturkalj.pcbuildlogger.ui.tabs.pcbuild.view.PcBuildViewHolder
+import com.davidturkalj.pcbuildlogger.ui.viewholders.PcBuildViewHolder
 import com.davidturkalj.pcbuildlogger.utilities.OnPcBuildClickListener
 
 class PcBuildAdapter(private val clickListener: OnPcBuildClickListener)

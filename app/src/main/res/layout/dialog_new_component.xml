@@ -35,7 +35,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_camera"
-        android:layout_margin="16dp"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="16dp"
         android:textColor="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -47,5 +48,27 @@
             android:textColor="@color/white"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/til_new_component_name_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_confirm"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/cancel"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/til_new_component_name_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/confirm"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

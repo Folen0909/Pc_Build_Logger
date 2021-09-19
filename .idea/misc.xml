@@ -7,14 +7,17 @@
         <entry key="app/src/main/res/layout-w1240dp/dialog_new_component.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout-w1240dp/fragment_components.xml" value="0.2603748326639893" />
         <entry key="app/src/main/res/layout-w1240dp/item_component.xml" value="0.2603748326639893" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.272289766970618" />
         <entry key="app/src/main/res/layout/activity_tabs.xml" value="0.33489583333333334" />
         <entry key="app/src/main/res/layout/activity_user_management.xml" value="0.33489583333333334" />
         <entry key="app/src/main/res/layout/dialog_new_build.xml" value="0.33489583333333334" />
-        <entry key="app/src/main/res/layout/dialog_new_component.xml" value="0.272289766970618" />
+        <entry key="app/src/main/res/layout/dialog_new_component.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_components.xml" value="0.33489583333333334" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.272289766970618" />
         <entry key="app/src/main/res/layout/fragment_pc_build.xml" value="0.33489583333333334" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.272289766970618" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.33489583333333334" />
-        <entry key="app/src/main/res/layout/item_component.xml" value="0.5598958333333334" />
+        <entry key="app/src/main/res/layout/item_component.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_copmonent.xml" value="0.40520833333333334" />
         <entry key="app/src/main/res/layout/item_pc_build.xml" value="0.33489583333333334" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.35104166666666664" />

@@ -2,8 +2,7 @@ package com.davidturkalj.pcbuildlogger
 
 import android.app.Application
 import android.content.Context
-import com.davidturkalj.pcbuildlogger.di.componentModule
-import com.davidturkalj.pcbuildlogger.di.pcBuildModule
+import com.davidturkalj.pcbuildlogger.di.appModule
 import com.davidturkalj.pcbuildlogger.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
@@ -21,7 +20,7 @@ class PCBuildLogger : Application() {
 
         startKoin {
             androidContext(this@PCBuildLogger)
-            modules(listOf(pcBuildModule, componentModule, viewModelModule))
+            modules(listOf(appModule, viewModelModule))
         }
     }
 }

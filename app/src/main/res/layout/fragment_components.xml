@@ -13,7 +13,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_add_component"
         android:layout_margin="16dp"/>
 
-    <ButtonDialogFragment
+    <Button
         android:id="@+id/btn_add_component"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

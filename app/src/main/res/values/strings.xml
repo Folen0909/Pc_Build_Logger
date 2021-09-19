@@ -17,4 +17,6 @@
     <string name="component_name">Component name</string>
     <string name="open_gallery">Open gallery</string>
     <string name="open_camera">Open camera</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
 </resources>

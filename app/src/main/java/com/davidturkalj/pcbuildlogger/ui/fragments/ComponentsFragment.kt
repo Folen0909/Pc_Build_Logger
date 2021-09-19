@@ -1,4 +1,4 @@
-package com.davidturkalj.pcbuildlogger.ui.components.view
+package com.davidturkalj.pcbuildlogger.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,15 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.davidturkalj.pcbuildlogger.databinding.FragmentComponentsBinding
 import com.davidturkalj.pcbuildlogger.data.model.Component
-import com.davidturkalj.pcbuildlogger.ui.components.adapter.ComponentsAdapter
-import com.davidturkalj.pcbuildlogger.ui.components.viewmodel.ComponentsViewModel
-import com.davidturkalj.pcbuildlogger.utilities.DialogListener
+import com.davidturkalj.pcbuildlogger.databinding.FragmentComponentsBinding
+import com.davidturkalj.pcbuildlogger.ui.activities.TabsActivity
+import com.davidturkalj.pcbuildlogger.ui.adapters.ComponentsAdapter
+import com.davidturkalj.pcbuildlogger.ui.viewmodels.ComponentsViewModel
 import com.davidturkalj.pcbuildlogger.utilities.OnComponentClickListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ComponentsFragment(private val pcBuildKey: String): Fragment(), OnComponentClickListener, DialogListener {
+class ComponentsFragment(private val key: String?) : Fragment(), OnComponentClickListener {
 
     private lateinit var componentsBinding: FragmentComponentsBinding
     private val viewModel by viewModel<ComponentsViewModel>()
@@ -24,17 +24,19 @@ class ComponentsFragment(private val pcBuildKey: String): Fragment(), OnComponen
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         componentsBinding = FragmentComponentsBinding.inflate(inflater, container, false)
         return componentsBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        componentsBinding.btnAddComponent.setOnClickListener { openNewComponentDialog() }
-        viewModel.setBuildKey(pcBuildKey)
-        viewModel.setUpDatabaseConnection()
+        viewModel.setComponentReference(key)
+        viewModel.getComponents()
+
+        componentsBinding.btnAddComponent.setOnClickListener {
+            viewModel.openDialog(activity as TabsActivity)
+        }
         setUpRecyclerView()
-        componentsBinding.btnAddComponent.setOnClickListener { openNewComponentDialog() }
         componentsBinding.btnBack.setOnClickListener { requireActivity().onBackPressed() }
         super.onViewCreated(view, savedInstanceState)
     }
@@ -51,26 +53,14 @@ class ComponentsFragment(private val pcBuildKey: String): Fragment(), OnComponen
         })
     }
 
-    private fun openNewComponentDialog() {
-        ComponentsNewDialog().show(parentFragmentManager, "New component", this)
-    }
-
     override fun onComponentDelete(component: Component) {
         viewModel.deleteComponent(component)
     }
 
-    override fun onDialogPositiveClick(name: String) {
-        onDialogPositiveClick(name, "")
-    }
-
-    override fun onDialogPositiveClick(name: String, imageLink: String) {
-        viewModel.createNewComponent(name, imageLink)
-    }
-
     companion object {
         const val TAG = "Components"
-        fun create(pcBuildKey: String): ComponentsFragment {
-            return ComponentsFragment(pcBuildKey)
+        fun create(key: String?): ComponentsFragment {
+            return ComponentsFragment(key)
         }
     }
 }
